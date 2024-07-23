@@ -11,6 +11,12 @@ export default defineNuxtConfig({
     }
   },
 
+  app: {
+    head: {
+      title: 'EIDEN BLOCK'
+    }
+  },
+
   devtools: {
     enabled: true
   },

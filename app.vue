@@ -6,7 +6,6 @@
 <script setup lang="ts">
 const runtimeConfig = useRuntimeConfig();
 const appConfig = useAppConfig();
-console.log('APP_CONFIG.TITTLE', appConfig.tittle);
 </script>
 
 <template>

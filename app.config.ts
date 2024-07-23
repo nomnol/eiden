@@ -1,10 +1,11 @@
 export default defineAppConfig({
-  title: 'E I D E N',
+  title: 'EIDEN BLOCK',
   theme: {
     dark: true,
     colors: {
       primary: '#993a62',
-      secondary: '#38a2e0'
+      secondary: '#38a2e0',
+      brand: '#576d4e'
     }
   }
 })
