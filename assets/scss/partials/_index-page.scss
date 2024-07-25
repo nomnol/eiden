@@ -6,5 +6,8 @@
 
   &__footer {
     padding: 20px;
+    display: grid;
+    grid-column-gap: 20px;
+    grid-auto-flow: column;
   }
 }

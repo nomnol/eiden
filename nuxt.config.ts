@@ -31,5 +31,7 @@ export default defineNuxtConfig({
 
   $development: {
     routeRules: {}
-  }
+  },
+
+  modules: ["@nuxt/eslint"]
 })

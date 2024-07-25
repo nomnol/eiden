@@ -16,4 +16,15 @@
   &_primary:hover {
     background-color: $primary;
   }
+
+  &_reset {
+    background-color: $primary;
+    color: #fff;
+    cursor: pointer;
+  }
+
+  &_reset:hover {
+    background-color: #ccc;
+    color: #000
+  }
 }
