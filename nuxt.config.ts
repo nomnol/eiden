@@ -33,5 +33,6 @@ export default defineNuxtConfig({
     routeRules: {}
   },
 
-  modules: ["@nuxt/eslint"]
+  modules: ["@nuxt/eslint"],
+  compatibilityDate: '2024-08-30'
 })
