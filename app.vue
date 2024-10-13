@@ -1,6 +1,6 @@
 <style lang="scss">
-  @import "@/assets/scss/global";
-  @import "@/assets/scss/partials/app-container";
+  @import "assets/scss/global";
+  @import "assets/scss/partials/app-container";
 </style>
 
 <script setup lang="ts">
