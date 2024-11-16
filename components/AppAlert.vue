@@ -3,11 +3,10 @@
 </style>
 
 <script setup lang="ts">
-
 </script>
 
 <template>
-  <div class="about-page">
-    ABOUT
+  <div class="alert">
+    App Alert
   </div>
 </template>

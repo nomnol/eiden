@@ -1,5 +1,5 @@
-<style lang="scss">
-  @import "assets/scss/partials/btn";
+<style lang="less">
+  @import "assets/less/partials/btn";
 </style>
 
 <script setup lang="ts">

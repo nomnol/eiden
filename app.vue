@@ -1,6 +1,6 @@
-<style lang="scss">
-  @import "@/assets/scss/global";
-  @import "@/assets/scss/partials/app-container";
+<style lang="less">
+  @import "assets/less/global.less";
+  @import "assets/less/partials/app-container.less";
 </style>
 
 <script setup lang="ts">

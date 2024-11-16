@@ -10,16 +10,14 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
-    "@nuxt/eslint": "^0.5.7",
-    "nuxt": "^3.13.2",
-    "vue": "^3.5.12",
+    "@nuxt/eslint": "^0.7.0",
+    "nuxt": "^3.14.159",
+    "vue": "^3.5.13",
     "vue-router": "^4.4.5"
   },
   "packageManager": "yarn@1.22.22+sha512.a6b2f7906b721bba3d67d4aff083df04dad64c399707841b7acf00f6b133b7ac24255f2652fa22ae3534329dc6180534e98d17432037ff6fd140556e2bb3137e",
   "devDependencies": {
     "@nuxtjs/eslint-config-typescript": "^12.1.0",
-    "node-sass": "^9.0.0",
-    "sass": "^1.79.5",
-    "sass-loader": "^16.0.2"
+    "less": "^4.2.0"
   }
 }

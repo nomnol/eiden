@@ -1,14 +1,17 @@
-<style lang="scss">
-  @import "assets/scss/partials/index-page";
+<style lang="less">
+  @import "assets/less/partials/index-page";
 </style>
 
 <script setup lang="ts">
-import debouncer from '~/utils/debouncer';
 const clickValue = ref(0);
 
 const onClickOnMeClick = debouncer(() => {
   clickValue.value += 1;
-}, 400)
+}, 100)
+
+const onResetClick = throttle(() => {
+  clickValue.value = 0
+}, 100)
 
 </script>
 
@@ -20,6 +23,11 @@ const onClickOnMeClick = debouncer(() => {
         :className="'btn_primary'"
         :text="'CLICK ON ME'"
         @click.stop="onClickOnMeClick"
+      />
+      <Btn
+        :className="'btn_reset'"
+        :text="'RESET COUNTER'"
+        @click.stop="onResetClick"
       />
     </footer>
   </section>

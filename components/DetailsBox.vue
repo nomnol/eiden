@@ -3,11 +3,10 @@
 </style>
 
 <script setup lang="ts">
-
 </script>
 
 <template>
-  <div class="about-page">
-    ABOUT
-  </div>
+  <details class="details-box">
+    <summary>DETAILS-BOX Summary</summary>
+  </details>
 </template>

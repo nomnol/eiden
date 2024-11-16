@@ -5,8 +5,8 @@ export default defineNuxtConfig({
   vite: {
     css: {
       preprocessorOptions: {
-        scss: {
-          additionalData: '@import "assets/scss/vars.scss";'
+        less: {
+          additionalData: '@import "assets/less/vars.less";'
         }
       }
     }
