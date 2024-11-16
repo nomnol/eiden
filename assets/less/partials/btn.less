@@ -14,7 +14,11 @@
   }
 
   &_primary:hover {
-    background-color: @primary;
+    background-color: @brand-hover;
+  }
+
+  &_primary:active {
+    background-color: @brand-click;
   }
 
   &_reset {
@@ -24,7 +28,10 @@
   }
 
   &_reset:hover {
-    background-color: #ccc;
-    color: #000
+    background-color: @primary-hover;
+  }
+
+  &_reset:active {
+    background-color: @primary-click;
   }
 }
