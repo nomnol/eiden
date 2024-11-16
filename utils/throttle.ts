@@ -1,5 +1,5 @@
-const throttle = (callback, time) => {
-  let throttleTimer;
+const throttle = (callback: Function, time: any) => {
+  let throttleTimer: Boolean;
   console.log()
 
   return () => {
