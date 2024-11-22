@@ -5,8 +5,13 @@
 <script setup lang="ts">
 const clickValue = ref(0);
 
-const onClickOnMeClick = debouncer(() => {
+const onClickOnPlus = debouncer(() => {
   clickValue.value += 1;
+}, 100)
+
+const onClickOnMinus = debouncer(() => {
+  if (clickValue.value === 0) return;
+  clickValue.value -= 1;
 }, 100)
 
 const onResetClick = throttle(() => {
@@ -21,8 +26,13 @@ const onResetClick = throttle(() => {
     <footer class="index-page__footer">
       <Btn
         :className="'btn_primary'"
-        :text="'CLICK ON ME'"
-        @click.stop="onClickOnMeClick"
+        :text="'PLUS ONE +'"
+        @click.stop="onClickOnPlus"
+      />
+      <Btn
+        :className="'btn_secondary'"
+        :text="'MINUS ONE —'"
+        @click.stop="onClickOnMinus"
       />
       <Btn
         :className="'btn_reset'"
