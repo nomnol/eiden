@@ -1,0 +1,52 @@
+.splash-screen {
+  display: grid;
+  min-height: 100dvh;
+  align-items: center;
+  justify-items: center;
+  cursor: crosshair;
+
+  &__definition {
+    font-size: 66px;
+    line-height: 66px;
+    font-weight: bold;
+    display: grid;
+    grid-gap: 10px;
+    color: @brand;
+    animation: splash-screen-animation 3s infinite alternate;
+  }
+
+  &__definition-highlight {
+    display: block;
+    height: 6px;
+    width: 100%;
+    transform-origin: center;
+    animation: highlight-animation 6s infinite alternate;
+    background: @secondary;
+
+    &_top {
+      background: @primary;
+    }
+  }
+}
+
+@keyframes splash-screen-animation {
+  0% {
+    color: @brand;
+  }
+
+  100% {
+    color: @secondary;
+  }
+}
+
+@keyframes highlight-animation {
+  0% {
+    transform: scaleX(0);
+    transform-origin: center;
+  }
+
+  100% {
+    transform: scaleX(1);
+    transform-origin: center;
+  }
+}
