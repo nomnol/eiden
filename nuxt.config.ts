@@ -19,16 +19,12 @@ export default defineNuxtConfig({
   },
 
   devtools: {
-    enabled: true
+    enabled: false
   },
 
-  runtimeConfig: {
+  runtimeConfig: {},
 
-  },
-
-  $production: {
-
-  },
+  $production: {},
 
   $development: {
     routeRules: {}
