@@ -4,19 +4,23 @@
 
 <script setup lang="ts">
 const props = defineProps({
-  className: {
-    type: String
-  },
+  className: String,
 
-  text: {
-    type: String
-  }
+  primary: Boolean,
+
+  secondary: Boolean,
+
+  text: String
 })
 </script>
 
 <template>
   <button
     class="btn"
-    :class="className"
+    :class="{
+      [className]: className,
+      'btn_primary': primary,
+      'btn_secondary': secondary
+    }"
   >{{text}}</button>
 </template>
