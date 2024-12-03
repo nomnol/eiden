@@ -1,5 +1,6 @@
 <style lang="less">
   @import "assets/less/partials/index-page";
+  @import "assets/less/partials/main-logo";
 </style>
 
 <script setup lang="ts">
@@ -24,6 +25,6 @@
     class="index-page"
     v-else
   >
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex, similique!</p>
+    <h1 class="main-logo">eiden<ins class="main-logo__sec-word">block</ins></h1>
   </section>
 </template>

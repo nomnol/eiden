@@ -15,7 +15,7 @@ const onSplashClick = () => {
 <template>
   <section
     class="splash-screen"
-    @click="onSplashClick"
+    @click.stop="onSplashClick"
   >
     <dfn
       class="splash-screen__definition"
