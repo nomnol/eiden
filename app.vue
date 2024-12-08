@@ -10,7 +10,7 @@ const appConfig = useAppConfig();
 
 <template>
   <main class="app-container">
-    <NuxtLayout>
+    <NuxtLayout name="default">
       <NuxtPage />
     </NuxtLayout>
   </main>
