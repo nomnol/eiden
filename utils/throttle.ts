@@ -1,14 +1,15 @@
-const throttle = (callback: Function, time: any) => {
-  let throttleTimer: Boolean;
-  console.log()
+type Callback = (...args: any[]) => void;
+
+const throttle = (callback: Callback, time: number) => {
+  let isThrottled: Boolean = false;
 
   return () => {
-    if (throttleTimer) return
-    throttleTimer = true
+    if (isThrottled) return
+    isThrottled = true
 
     setTimeout(() => {
       callback()
-      throttleTimer = false
+      isThrottled = false
     }, time);
   }
 }

@@ -3,11 +3,9 @@
 </style>
 
 <script setup lang="ts">
-const emit = defineEmits<{
-  (type: 'removeSplashScreen'): void
-}>()
+const emit = defineEmits<{ (type: 'removeSplashScreen'): void }>()
 
-const onSplashClick = () => {
+const onSplashClick = (): void => {
   emit('removeSplashScreen');
 }
 </script>

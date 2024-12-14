@@ -1,0 +1,54 @@
+.color-mode-switcher {
+  position: fixed;
+  top: 12px;
+  right: 12px;
+  padding: 30px;
+
+  &__checkbox {
+    height: 50px;
+    width: 50px;
+    -webkit-appearance: none;
+    box-shadow:
+              -10px -10px 15px rgba(255, 255, 255, 0.5),
+            10px 10px 15px rgba(70, 70, 70, 0.12);
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    border-radius: 50%;
+    border: 5px solid #ececec;
+    outline: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: border-color .1s;
+  }
+
+  &__checkbox:after {
+    content: '';
+    display: inline-flex;
+    width: 20px;
+    height: 20.7px;
+    background-image: url('assets/svg/power-off.svg');
+    background-repeat: no-repeat;
+    transition: background-image .2s;
+  }
+
+  &__checkbox:checked {
+    box-shadow:
+              -10px -10px 15px rgba(255, 255, 255, 0.5),
+            10px 10px 15px rgba(70, 70, 70, 0.12),
+              inset -10px -10px 15px rgba(255, 255, 255, 0.5),
+            inset 10px 10px 15px rgba(70, 70, 70, 0.12);
+  }
+
+  &__checkbox:hover::after,
+  &__checkbox:checked::after {
+    background-image: url('assets/svg/power-on.svg');
+  }
+
+  &__checkbox_dark:checked {
+    box-shadow: none;
+  }
+}

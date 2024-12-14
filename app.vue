@@ -6,11 +6,12 @@
 <script setup lang="ts">
 const runtimeConfig = useRuntimeConfig();
 const appConfig = useAppConfig();
+
 </script>
 
 <template>
   <main class="app-container">
-    <NuxtLayout>
+    <NuxtLayout name="default">
       <NuxtPage />
     </NuxtLayout>
   </main>
