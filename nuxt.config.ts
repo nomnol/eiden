@@ -30,7 +30,10 @@ export default defineNuxtConfig({
     routeRules: {}
   },
 
-  modules: ["@nuxt/eslint"],
+  modules: [
+    '@nuxt/eslint',
+    '@nuxt/test-utils/module'
+  ],
   compatibilityDate: '2024-08-30',
   alias: {
     '@': resolve(__dirname, '/')
