@@ -1,5 +1,5 @@
 export default defineAppConfig({
-  title: 'EIDEN BLOCK',
+  title: 'E I D E N___B L O C K',
   theme: {
     dark: true,
     colors: {

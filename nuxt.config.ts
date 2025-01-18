@@ -14,7 +14,7 @@ export default defineNuxtConfig({
 
   app: {
     head: {
-      title: 'EIDEN BLOCK'
+      title: 'E I D E N___B L O C K'
     }
   },
 
