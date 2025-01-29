@@ -3,11 +3,12 @@
 </style>
 
 <script setup lang="ts">
-const darkMode = useState('darkMode', () => false);
+  const globalStore = useGlobalStore()
+  const { isDarkMode } = storeToRefs(globalStore)
 
-const onSwitcherClick = (): void => {
-  darkMode.value = !darkMode.value;
-}
+  const onSwitcherClick = (): void => {
+    globalStore.toggleDarkMode();
+  }
 </script>
 
 <template>
@@ -15,7 +16,7 @@ const onSwitcherClick = (): void => {
     <input
       type="checkbox"
       class="color-mode-switcher__checkbox"
-      :class="{'color-mode-switcher__checkbox_dark': darkMode}"
+      :class="{'color-mode-switcher__checkbox_dark': isDarkMode}"
       @click.stop="onSwitcherClick"
       @keydown.enter.space.stop="onSwitcherClick"
     />

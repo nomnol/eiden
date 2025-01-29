@@ -4,8 +4,8 @@
 </style>
 
 <script setup lang="ts">
-  import throttle from '~/utils/throttle';
-  const darkMode = useState('darkMode');
+  const globalStore = useGlobalStore()
+  const { isDarkMode } = storeToRefs(globalStore)
   const isSplashing = ref(true);
 
   setTimeout((): void => {
@@ -25,12 +25,12 @@
   />
   <section
     class="index-page"
-    :class="{ 'index-page_dark': darkMode}"
+    :class="{ 'index-page_dark': isDarkMode}"
     v-else
   >
     <h1
       class="main-logo"
-      :class="{'main-logo_dark': darkMode}"
+      :class="{'main-logo_dark': isDarkMode}"
     >eiden<ins class="main-logo__sec-word">block</ins></h1>
     <ColorModeSwitcher />
   </section>

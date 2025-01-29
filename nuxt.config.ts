@@ -32,8 +32,12 @@ export default defineNuxtConfig({
 
   modules: [
     '@nuxt/eslint',
-    '@nuxt/test-utils/module'
+    '@nuxt/test-utils/module',
+    '@pinia/nuxt'
   ],
+  imports: {
+    dirs: ['stores']
+  },
   compatibilityDate: '2024-08-30',
   alias: {
     '@': resolve(__dirname, '/')
