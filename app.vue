@@ -7,6 +7,8 @@
 const runtimeConfig = useRuntimeConfig();
 const appConfig = useAppConfig();
 
+console.log('RUNTIME_CONFIG:\n', runtimeConfig);
+console.log('APP_CONFIG:\n', appConfig);
 </script>
 
 <template>
