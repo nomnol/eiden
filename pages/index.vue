@@ -1,20 +1,33 @@
-<style lang="less">
-  @import "assets/less/partials/index-page";
-  @import "assets/less/partials/main-logo";
-</style>
-
 <script setup lang="ts">
-  const globalStore = useGlobalStore()
-  const { isDarkMode } = storeToRefs(globalStore)
-  const isSplashing = ref(true);
+import { onMounted } from 'vue';
 
-  setTimeout((): void => {
+import 'assets/less/partials/index-page.less';
+import 'assets/less/partials/main-logo.less';
+
+const { $apollo } = useNuxtApp();
+const globalStore = useGlobalStore();
+const { isDarkMode } = storeToRefs(globalStore);
+const isSplashing = ref(true);
+
+setTimeout((): void => {
     isSplashing.value = false;
   }, 6000)
 
   const onRemoveSplashScreen = throttle((): void => {
     isSplashing.value = false;
   }, 100)
+
+onMounted(async () => {
+  try {
+    const response = await $apollo.query({
+      query: '', // todo
+    })
+
+    console.log(response)
+  } catch(error) {
+    console.error(error)
+  }
+})
 
 </script>
 
