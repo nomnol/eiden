@@ -22,7 +22,14 @@ export default defineNuxtConfig({
     enabled: false
   },
 
-  runtimeConfig: {},
+  runtimeConfig: {
+    ACCESS_TOKEN: process.env.ACCESS_TOKEN,
+
+    public: {
+      API_BASE_URL: process.env.API_BASE_URL,
+      API_STREAMING_URL: process.env.API_STREAMING_URL
+    }
+  },
 
   $production: {},
 
@@ -35,9 +42,6 @@ export default defineNuxtConfig({
     '@nuxt/test-utils/module',
     '@pinia/nuxt'
   ],
-  imports: {
-    dirs: ['stores']
-  },
   compatibilityDate: '2024-08-30',
   alias: {
     '@': resolve(__dirname, '/')

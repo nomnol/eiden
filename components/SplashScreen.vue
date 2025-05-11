@@ -1,8 +1,6 @@
-<style lang="less">
-  @import "assets/less/partials/splash-screen";
-</style>
-
 <script setup lang="ts">
+import 'assets/less/partials/splash-screen.less';
+
 const emit = defineEmits<{ (type: 'removeSplashScreen'): void }>()
 
 const onSplashClick = (): void => {

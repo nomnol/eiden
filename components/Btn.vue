@@ -1,8 +1,7 @@
-<style lang="less">
-  @import "assets/less/partials/btn";
-</style>
-
 <script setup lang="ts">
+
+import 'assets/less/partials/btn.less';
+
 const props = defineProps({
   className: String,
 

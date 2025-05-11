@@ -1,14 +1,13 @@
-<style lang="less">
-  @import "assets/less/partials/color-mode-switcher";
-</style>
-
 <script setup lang="ts">
-  const globalStore = useGlobalStore()
-  const { isDarkMode } = storeToRefs(globalStore)
+import 'assets/less/partials/color-mode-switcher.less';
 
-  const onSwitcherClick = (): void => {
-    globalStore.toggleDarkMode();
-  }
+const globalStore = useGlobalStore()
+const { isDarkMode } = storeToRefs(globalStore)
+
+const onSwitcherClick = (): void => {
+  globalStore.toggleDarkMode();
+}
+
 </script>
 
 <template>
